@@ -1,0 +1,664 @@
+@media all and (max-width:1800px) and (min-width:1200px){
+    #theme_wrapper_box{
+        width: 90%;
+        height: 54px;
+        margin: auto;
+    }
+    
+    .theme_inner_wrapper{
+        width: 100%;
+        height:inherit;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .theme_icon{
+        width: 11.3%;
+        height: inherit;
+        margin-top: 1px;
+    }
+    
+    .mc_logo{
+        width: 108px;
+        height: 22px;
+        padding: 16px 6px 16px 10px;
+    }
+    
+    .link_box{
+        box-sizing: border-box;
+        width: 67.7%;
+        height: inherit;
+        padding: 0 1px 0 2px;
+    }
+    
+    .link_list{
+        height: inherit;
+        list-style: none;
+    }
+    
+    .link_list li{
+        line-height: 60px;
+        display: inline;
+    }
+    
+    .link_list li a{
+        padding: 16px 8px 10px 8px;
+        border: 1px;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: 'Segoe UI',SegoeUI,'Microsoft YaHei',微软雅黑,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    
+    .action{
+        width: 21%;
+        height: inherit;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    #all_microsoft{
+        width: 48.84%;
+        height: inherit;
+        line-height: 60px;
+        letter-spacing: normal;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    #micro{
+        position: relative;
+        font-size: 14px;
+    }
+    
+    #micro::before{
+        content: "";
+        background-color: black;
+        width: 80%;
+        height:2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        translate: 0 150%;
+        display: none;
+    }
+    
+    #micro:hover::before{
+        display: block;
+    }
+    
+    #micro::after{
+        content: "\e625";
+        font-family: "iconfont" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    #search{
+        width: 13.95%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        margin: 0 6px;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    #search::before{
+        content: "在Microsoft.com中搜索";
+        width: 150px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: white;
+        border: 1px solid gray;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        translate: -10% 60%;
+        display: none;
+    }
+    
+    #search:hover::before{
+        display: block;
+    }
+    
+    #shopping_trolley{
+        width: 6.2%;
+        height: 37px;
+        line-height: 37px;
+        position: relative;
+        padding: 2px 0 8px 0;
+        margin: 0 10px 0 7px;
+        cursor: pointer;
+    }
+    
+    #shopping_trolley::before{
+        content: "0 购物车中的物品";
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: white;
+        border: 1px solid gray;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        translate: 0 60%;
+        display: none;
+    }
+    
+    #shopping_trolley:hover::before{
+        display: block;
+    }
+    
+    #account{
+        box-sizing: border-box;
+        width:12.55%;
+        height: 32px;
+        text-align: center;
+        line-height: 30px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 1px solid gray;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    #account::before{
+        content: "请登录你的账户";
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: white;
+        border: 1px solid gray;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        translate: 30% 150%;
+        display: none;
+    }
+    
+    #account:hover::before{
+        display: block;
+    }
+    
+    #add_user_logo{
+        font-size: 20px;
+    }
+
+    #shopping_trolley,#account a{
+        text-decoration: none;
+    }
+
+    #search_box{
+        display: none;
+        width: 1000px;
+        height: 54px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #text_box{
+        width: 850px; 
+        height: 35px;
+    }
+
+    .blank_box{
+        width: 1px;
+        height: 35px;
+        position: relative;
+    }
+
+    .blank_box::before{
+        content: "\e612";
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        top:15%;
+        right: 0;
+        translate: -50% 0;
+    }
+
+    #btn{
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        margin-left: 50px;
+        text-align: center;
+    }
+
+    .all_micro{
+        width: 1200px;
+        height: 410px;
+        position: absolute;
+        top:100%;
+        right: -100%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 999;
+    }
+    
+    .top_link_table{
+        box-sizing: border-box;
+        width: 100%;
+        height: 370px;
+        padding: 0 20px;
+        background-color: #f2f2f2;
+        display: grid;
+        grid-template-columns: repeat(6,16.67%);
+        grid-template-rows: repeat(1,100%);
+    }
+    
+    .top_link_table ul{
+        list-style: none;
+    }
+    
+    .top_link_table ul h4{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .top_link_table ul li{
+        font-size: 14px;
+        line-height: 44px;
+    }
+    
+    .top_link_table ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .top_link_table ul li a:hover{
+        text-decoration: underline;
+    }
+    
+    .all_bottom{
+        width: 100%;
+        height: 40px;
+        background-color: #e6e6e6;
+        text-align: center;
+        line-height: 40px;
+    }
+    
+    .all_bottom a{
+        text-decoration: none;
+        color: black;
+        position: relative;
+    }
+    
+    .all_bottom a:hover{
+        text-decoration: underline;
+    }
+    
+    .all_bottom a::after{
+        content: ">";
+        position: absolute;
+        right: 0;
+        translate: 200% 0;
+    }
+}
+
+@media all and (min-width:1800px){
+    #theme_wrapper_box{
+        width: 90%;
+        height: 54px;
+        margin: auto;
+    }
+    
+    .theme_inner_wrapper{
+        width: 100%;
+        height:inherit;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .theme_icon{
+        width: 11.3%;
+        height: inherit;
+        margin-top: 1px;
+    }
+    
+    .mc_logo{
+        width: 108px;
+        height: 22px;
+        padding: 16px 6px 16px 10px;
+    }
+    
+    .link_box{
+        box-sizing: border-box;
+        width: 67.7%;
+        height: inherit;
+        padding: 0 1px 0 2px;
+    }
+    
+    .link_list{
+        height: inherit;
+        list-style: none;
+    }
+    
+    .link_list li{
+        line-height: 60px;
+        display: inline;
+    }
+    
+    .link_list li a{
+        padding: 16px 8px 10px 8px;
+        border: 1px;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: 'Segoe UI',SegoeUI,'Microsoft YaHei',微软雅黑,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    
+    .action{
+        width: 600px;
+        height: inherit;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    
+    #all_microsoft{
+        width: 125px;
+        height: inherit;
+        line-height: 60px;
+        letter-spacing: normal;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    #micro{
+        position: relative;
+        font-size: 14px;
+    }
+    
+    #micro::before{
+        content: "";
+        background-color: black;
+        width: 80%;
+        height:2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        translate: 0 150%;
+        display: none;
+    }
+    
+    #micro:hover::before{
+        display: block;
+    }
+    
+    #micro::after{
+        content: "\e625";
+        font-family: "iconfont" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    #search{
+        width: 65px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        margin: 0 6px 0 30px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #search::before{
+        content: "搜索";
+        position: absolute;
+        top: 5%;
+        left: 0;
+        translate: -50% 0;
+    }
+
+    #search:hover::before{
+        text-decoration: underline;
+    }
+    
+    #search::after{
+        content: "在Microsoft.com中搜索";
+        width: 150px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: white;
+        border: 1px solid gray;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        translate: -10% 60%;
+        display: none;
+    }
+    
+    #search:hover::after{
+        display: block;
+    }
+    
+    #shopping_trolley{
+        width: 40px;
+        height: 37px;
+        line-height: 46px;
+        text-align: center;
+        position: relative;
+        padding: 2px 0 8px 0;
+        margin: 0 10px 0 60px;
+        cursor: pointer;
+    }
+
+    #shopping_trolley::before{
+        content: "购物车";
+        width: 50px;
+        position: absolute;
+        top: 5%;
+        left: 0;
+        translate: -80% 0;
+    }
+
+    #shopping_trolley:hover::before{
+        text-decoration: underline;
+    }
+    
+    #shopping_trolley::after{
+        content: "0 购物车中的物品";
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: white;
+        border: 1px solid gray;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        translate: 0 60%;
+        display: none;
+    }
+    
+    #shopping_trolley:hover::after{
+        display: block;
+    }
+    
+    #account{
+        box-sizing: border-box;
+        width:32px;
+        height: 32px;
+        text-align: center;
+        line-height: 30px;
+        margin: 8px 8px 8px 40px;
+        border-radius: 50%;
+        border: 1px solid gray;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #account::before{
+        content: "登录";
+        position: absolute;
+        top: 5%;
+        left: 0;
+        translate: -100% 0;
+        width: 40px;
+    }
+    
+    #account::after{
+        content: "请登录你的账户";
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background-color: white;
+        border: 1px solid gray;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        translate: 30% 150%;
+        display: none;
+    }
+    
+    #account:hover::after{
+        display: block;
+    }
+    
+    #add_user_logo{
+        font-size: 20px;
+    }
+
+    #shopping_trolley,#account a{
+        text-decoration: none;
+    }
+
+    #search_box{
+        display: none;
+        width: 1300px;
+        height: 54px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #text_box{
+        width: 1120px; 
+        height: 35px;
+    }
+
+    .blank_box{
+        width: 1px;
+        height: 35px;
+        position: relative;
+    }
+
+    .blank_box::before{
+        content: "\e612";
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        top:15%;
+        right: 0;
+        translate: -140% 0;
+    }
+
+    #btn{
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        margin-left: 30px;
+        text-align: center;
+    }
+
+    .all_micro{
+        width: 1200px;
+        height: 410px;
+        position: absolute;
+        top:100%;
+        right: -5%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 999;
+    }
+    
+    .top_link_table{
+        box-sizing: border-box;
+        width: 100%;
+        height: 370px;
+        padding: 0 20px;
+        background-color: #f2f2f2;
+        display: grid;
+        grid-template-columns: repeat(6,16.67%);
+        grid-template-rows: repeat(1,100%);
+    }
+    
+    .top_link_table ul{
+        list-style: none;
+    }
+    
+    .top_link_table ul h4{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .top_link_table ul li{
+        font-size: 14px;
+        line-height: 44px;
+    }
+    
+    .top_link_table ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .top_link_table ul li a:hover{
+        text-decoration: underline;
+    }
+    
+    .all_bottom{
+        width: 100%;
+        height: 40px;
+        background-color: #e6e6e6;
+        text-align: center;
+        line-height: 40px;
+    }
+    
+    .all_bottom a{
+        text-decoration: none;
+        color: black;
+        position: relative;
+    }
+    
+    .all_bottom a:hover{
+        text-decoration: underline;
+    }
+    
+    .all_bottom a::after{
+        content: ">";
+        position: absolute;
+        right: 0;
+        translate: 200% 0;
+    }
+}

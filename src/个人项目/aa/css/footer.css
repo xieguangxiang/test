@@ -1,0 +1,84 @@
+.footer_wrapper{
+    width: 90%;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.link_table{
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: repeat(1,100%);
+    grid-template-columns: repeat(6,16.67%);
+}
+
+.link_table ul{
+    list-style: none;
+}
+
+.link_table ul h4{
+    margin-bottom: 10px;
+}
+
+.link_table ul li{
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.link_table ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.link_table ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer_bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.langauge span{
+    font-size: 12px;
+}
+
+.langauge span::before{
+    content: "\e9ee";
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+}
+
+.more_information ul{
+    list-style: none;
+}
+
+.more_information ul li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.more_information ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.more_information ul li a:hover{
+    text-decoration: underline;
+}
+
+.more_information ul li span::before{
+    content: "\e6d5";
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
