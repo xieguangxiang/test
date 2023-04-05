@@ -10,6 +10,10 @@ var dot1=document.getElementById('dot1');
 var dot2=document.getElementById('dot2');
 var is_pic1=true;
 var timer;
+var left_arrow_cover=document.getElementById('left_arrow_cover');
+var right_arrow_cover=document.getElementById('right_arrow_cover');
+var status1=true;
+var status2=true;
 
 //为图片设置点击事件
 picture_shower_pic1.onclick=()=>{
@@ -23,33 +27,28 @@ function pic_preparer(pic){
     pic.style.left='100%';
     pic.style.translate='0 0';
 }
+function my_changer(pic1,pic2){
+    new Promise((resolve,reject)=>{
+        pic1.style.translate='-100% 0';
+        pic2.style.left='0';
+        pic1.style.opacity='0';
+        pic2.style.opacity='1';
+        setTimeout(()=>{resolve(4)},500);
+    }).then(()=>{
+        pic_preparer(pic1);
+    })
+}
 function pic_turner(){
     if(is_pic1){
-        new Promise((resolve,reject)=>{
-            picture_shower_pic1.style.translate='-100% 0';
-            picture_shower_pic2.style.left='0';
-            picture_shower_pic1.style.zIndex='-1';
-            picture_shower_pic2.style.zIndex='91';
-            dot2.style.backgroundColor='black';
-            dot1.style.backgroundColor='transparent';
-            setTimeout(()=>{resolve(4)},500);
-        }).then(()=>{
-            pic_preparer(picture_shower_pic1);
-            is_pic1=false;
-        })
+        my_changer(picture_shower_pic1,picture_shower_pic2);
+        dot2.style.backgroundColor='black';
+        dot1.style.backgroundColor='transparent';
+        is_pic1=false;
     }else{
-        new Promise((resolve,reject)=>{
-            picture_shower_pic1.style.zIndex='91';
-            picture_shower_pic2.style.zIndex='-1';
-            picture_shower_pic2.style.translate='-100% 0';
-            picture_shower_pic1.style.left='0';
-            dot1.style.backgroundColor='black';
-            dot2.style.backgroundColor='transparent';
-            setTimeout(()=>{resolve(4)},500);
-        }).then(()=>{
-            pic_preparer(picture_shower_pic2);
-            is_pic1=true;
-        })
+        my_changer(picture_shower_pic2,picture_shower_pic1);
+        dot2.style.backgroundColor='transparent';
+        dot1.style.backgroundColor='black';
+        is_pic1=true;
     }
 }
 function mytimer(){
@@ -79,13 +78,13 @@ picture_control_pause.addEventListener('mouseout',()=>{
     }
 })
 left_arrow.addEventListener('mouseover',()=>{
-    left_arrow_span.style.translate='-100% 0';
+    left_arrow_span.style.translate='-20% 0';
 })
 left_arrow.addEventListener('mouseout',()=>{
     left_arrow_span.style.translate='0 0';
 })
 right_arrow.addEventListener('mouseover',()=>{
-    right_arrow_span.style.translate='100% 0';
+    right_arrow_span.style.translate='20% 0';
 })
 right_arrow.addEventListener('mouseout',()=>{
     right_arrow_span.style.translate='0 0';
@@ -103,12 +102,28 @@ picture_control_pause.addEventListener('click',()=>{
     }
 })
 left_arrow.onclick=function(){
-    clearInterval(timer);
-    pic_turner();
-    mytimer();
+    if(status1){
+        new Promise((resolve,reject)=>{
+            status1=false;
+            clearInterval(timer);
+            pic_turner();
+            mytimer();
+            setTimeout(()=>{resolve(4)},800);
+        }).then(()=>{
+            status1=true;
+        })
+    }
 };
 right_arrow.onclick=function(){
-    clearInterval(timer);
-    pic_turner();
-    mytimer();
+    if(status2){
+        new Promise((resolve,reject)=>{
+            status2=false;
+            clearInterval(timer);
+            pic_turner();
+            mytimer();
+            setTimeout(()=>{resolve(4)},800);
+        }).then(()=>{
+            status2=true;
+        })
+    }
 };

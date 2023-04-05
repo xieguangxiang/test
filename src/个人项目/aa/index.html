@@ -31,7 +31,7 @@
                     </ul>
                 </nav>
                 <div class="action" id="action_box">
-                    <div id="all_microsoft" class="add_border">
+                    <button id="all_microsoft">
                         <span id="micro">所有 Microsoft </span>
                         <div class="all_micro" id="all_micro_box">
                             <div class="top_link_table">
@@ -84,15 +84,15 @@
                             </div>
                             <div class="all_bottom"><a href="https://www.microsoft.com/zh-cn/sitemap.aspx">查看站点地图</a></div>
                         </div>
+                    </button>
+                    <button id="search"><span class="iconfont icon-sousuo"></span></button>
+                    <button id="shopping_trolley"><a href="https://www.microsoftstore.com.cn/cart"><span class="iconfont icon-gouwuche" style="color: black;"></span></a></button>
+                    <button id="account"><a href="https://www.microsoft.com/rpsauth/v1/account/SignIn?ru=https%3A%2F%2Fwww.microsoft.com%2Fzh-cn%2F"><span class="iconfont icon-tianjiayonghu" id="add_user_logo" style="color: black;"></span></a></div>
+                    <div id="search_box">
+                        <input type="search" placeholder="在Microsoft.com中搜索" id="text_box">
+                        <div class="blank_box"></div>
+                        <button id="btn">取消</button>
                     </div>
-                    <div id="search" class="add_border"><span class="iconfont icon-sousuo"></span></div>
-                    <div id="shopping_trolley" class="add_border"><a href="https://www.microsoftstore.com.cn/cart"><span class="iconfont icon-gouwuche" style="color: black;"></span></a></div>
-                    <div id="account" class="add_border"><a href="https://www.microsoft.com/rpsauth/v1/account/SignIn?ru=https%3A%2F%2Fwww.microsoft.com%2Fzh-cn%2F"><span class="iconfont icon-tianjiayonghu" id="add_user_logo" style="color: black;"></span></a></div>
-                </div>
-                <div id="search_box">
-                    <input type="search" placeholder="在Microsoft.com中搜索" id="text_box">
-                    <div class="blank_box"></div>
-                    <button id="btn">取消</button>
                 </div>
             </div>
         </div>
@@ -134,11 +134,15 @@
             </ul>
         </div>
         <div class="picture_control">
-            <div id="picture_control_pause" class="add_border"><span class="iconfont icon-zanting" id="picture_control_pause_span"></span></div>
-            <div id="left_arrow" class="add_border"><div id="left_arrow_span"><</div></div>
+            <button id="picture_control_pause"><span class="iconfont icon-zanting" id="picture_control_pause_span"></span></button>
+            <button id="left_arrow">
+                <div id="left_arrow_span"><</div>
+            </button>
             <div class="dot" id="dot1"></div>
             <div class="dot" id="dot2"></div>
-            <div id="right_arrow" class="add_border"><div id="right_arrow_span">></div></div>
+            <button id="right_arrow">
+                <div id="right_arrow_span">></div>
+            </button>
         </div>
         <div class="producter">
             <ul class="producter_list">
@@ -196,7 +200,7 @@
             </div>
             <div class="xbox">
                 <a style="text-decoration: none;color: black;" href="https://www.microsoftstore.com.cn/hardware/accessories/xbox-accessories?icid=mscom_marcom_MPH1a_XboxControllers">
-                    <img src="./image/xbox.jpg">
+                    <img src="./image/xbox.jpg" style="width: 100%;">
                     <div class="picture_detail" style="left: 10%;">
                         <h1 style="margin-bottom: 16px;">Xbox 控制器</h1>
                         <p style="margin-bottom: 24px;font-size: 14px;">Elite 品质，无线连接，随处适用 - 无论你的游戏风格如何，这款控制器都能满足你的需求</p>
@@ -242,6 +246,8 @@
         <div class="back_top" id="fixer"><a id="back" href="#top"><span>返回首页</span></a></div>
         <script type="text/javascript" src="./js/main_init.js"></script>
     </div>
+    <!--页面空白-->
+    <div style="width: 100%;height: 90px;"></div>
     <!--页面底部-->
     <div class="footer">
         <link rel="stylesheet" href="./css/footer.css">
