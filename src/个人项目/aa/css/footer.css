@@ -57,6 +57,15 @@
     font-size: 16px;
 }
 
+.langauge span a{
+    text-decoration: none;
+    color: black;
+}
+
+.langauge span a:hover{
+    text-decoration: underline;
+}
+
 .more_information ul{
     list-style: none;
 }

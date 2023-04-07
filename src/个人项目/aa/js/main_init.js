@@ -1,5 +1,4 @@
-var picture_shower_pic1=document.getElementById('picture_shower_pic1');
-var picture_shower_pic2=document.getElementById('picture_shower_pic2');
+var pic_shower=document.getElementById('pic_shower');
 var picture_control_pause=document.getElementById('picture_control_pause');
 var picture_control_pause_span=document.getElementById('picture_control_pause_span');
 var left_arrow=document.getElementById('left_arrow');
@@ -14,13 +13,15 @@ var left_arrow_cover=document.getElementById('left_arrow_cover');
 var right_arrow_cover=document.getElementById('right_arrow_cover');
 var status1=true;
 var status2=true;
+var is_turning=false;
 
 //为图片设置点击事件
-picture_shower_pic1.onclick=()=>{
-    window.location.href='https://www.microsoftstore.com.cn/promotion?WT.mc_id=msftcn_MSCOM_HP_HeroBanner1_CTA1';
-};
-picture_shower_pic2.onclick=()=>{
-    window.location.href='https://www.microsoftstore.com.cn/surface/surface-pro-9?icid=mscom_marcom_H2a_SurfacePro9';
+pic_shower.onclick=()=>{
+    if(is_pic1){
+        window.location.href='https://www.microsoftstore.com.cn/?WT.mc_id=msftcn_MSCOM_HP_HeroBanner1_CTA1';
+    }else{
+        window.location.href='https://www.microsoftstore.com.cn/surface/surface-pro-9?icid=mscom_marcom_H2a_SurfacePro9';
+    }
 };
 //图片自动轮播
 function pic_preparer(pic){
@@ -33,9 +34,11 @@ function my_changer(pic1,pic2){
         pic2.style.left='0';
         pic1.style.opacity='0';
         pic2.style.opacity='1';
+        is_turning=true;
         setTimeout(()=>{resolve(4)},500);
     }).then(()=>{
         pic_preparer(pic1);
+        is_turning=false;
     })
 }
 function pic_turner(){
@@ -102,12 +105,14 @@ picture_control_pause.addEventListener('click',()=>{
     }
 })
 left_arrow.onclick=function(){
-    if(status1){
+    if(status1&&!is_turning){
         new Promise((resolve,reject)=>{
             status1=false;
             clearInterval(timer);
             pic_turner();
-            mytimer();
+            if(picture_control_pause.isplay){
+                mytimer();
+            }
             setTimeout(()=>{resolve(4)},800);
         }).then(()=>{
             status1=true;
@@ -115,12 +120,14 @@ left_arrow.onclick=function(){
     }
 };
 right_arrow.onclick=function(){
-    if(status2){
+    if(status2&&!is_turning){
         new Promise((resolve,reject)=>{
             status2=false;
             clearInterval(timer);
             pic_turner();
-            mytimer();
+            if(picture_control_pause.isplay){
+                mytimer();
+            }
             setTimeout(()=>{resolve(4)},800);
         }).then(()=>{
             status2=true;
